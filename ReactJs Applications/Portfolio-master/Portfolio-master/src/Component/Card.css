@@ -1,0 +1,126 @@
+.cardContainer{
+  text-align: left;
+  width: 100%;  
+  height: max-content;
+  display: grid;
+  justify-content: space-around;
+  margin-top: 6%;
+  gap: 15px;
+  grid-template-columns: repeat(3, 32%);
+  grid-template-rows: repeat(2, 300px);
+  grid-template-areas: ". . .";
+}
+#card{
+  width: 100%;
+  height : 100%;
+  background-color: #182848;
+  border-radius: 5px;
+  padding: 15px;
+}
+#card:hover{
+  transition: .2s;
+  box-shadow: 0px 0px 20px 4px #89bcfe84;
+}
+.upperpart{
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.projectName{
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2.0rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin: 10px 0px;
+  color: rgb(255, 255, 255);
+}
+.projectName:hover{
+  color: #00bbff;
+}
+.Cardicon{
+  height: 4.5rem;
+  width: 4.5rem;
+  object-fit: cover;
+}
+.container{
+  background-color: transparent;
+  margin-top: 10px;
+  width: auto;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+}
+.CradDeatailConatiner{
+  padding-top: 10px;
+  height: max-content;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+.projectDisp{
+  text-align: left;
+  font-size: 1.8rem;  
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.545);
+  overflow: hidden;
+  min-height: 120px;
+  overflow-y:auto;
+  scroll-behavior: smooth;
+}
+.techContainer{
+  width: 100%;
+  overflow: hidden;
+  height: max-content;
+}
+.techUsed{
+  color: rgba(255, 255, 255, 0.345);
+  font-size: 14px;
+  padding: 4px;
+  width: max-content;
+  height: max-content;
+  font-weight: 550;
+}
+@media screen and (max-width : 600px) {
+  .cardContainer{
+    grid-template-columns: repeat(1, 92%);
+    grid-template-rows: repeat(1, 300px);
+    grid-template-areas: " . ";
+  }
+  #card{
+    width: 100%;
+    height: 100%;
+    margin-right: 0px;
+  }
+  .projectName{
+    font-size: 2.5rem;
+    font-weight: 550;
+  }
+}
+@media screen and (max-width : 760px) and (min-width: 420px){
+  .cardContainer{
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(3,300px);
+    grid-template-areas: ". .";
+  }
+}
+@media screen and (max-width : 380px){
+  .cardContainer{
+    grid-template-rows: repeat(2, max-content);
+  }
+  #card{
+    padding: 10px;
+  }
+  .projectDisp{
+    font-size: 1.6rem;
+    min-height: 80px;
+  }
+  .techContainer{
+    margin-top: 1rem;
+  }
+  .techUsed{
+    word-wrap: break-word;
+  }
+
+}

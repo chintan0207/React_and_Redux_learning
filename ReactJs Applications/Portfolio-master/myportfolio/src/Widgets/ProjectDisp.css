@@ -1,0 +1,215 @@
+.DispalyProjects{
+  width: 100%;
+  /* background-color: yellow; */
+  height: max-content;
+  padding: 20px;
+  display: flex;
+  margin-bottom: 3rem;
+  align-items: center;
+  margin: auto;
+}
+.PImageContainer{
+  max-width: 50%;
+  height: max-content;
+  background-color: #89bcfe7e;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.projectImage{
+  width: 100%;
+  height: max-content;
+  /* background-color: #f6b02d7d; */
+  mix-blend-mode: soft-light;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.projectImage:hover{
+  mix-blend-mode: normal;
+}
+.projectdetails{
+  width: 100%;
+  height: 100%;
+  /* background-color: turquoise; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: right; */
+  text-align: right;
+  padding: 20px 0px;
+  flex-wrap: wrap-reverse;
+}
+.projectdetails > span{
+  font-size: 16px;
+  height: max-content;
+  font-weight: 550;
+  color: #89BBFE;
+  padding-top: 10px;
+}
+.projectdetails > h4{
+  color: #FFEEDD;
+  font-size: 26px;
+  padding: 5px 0px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+.DiscpContainer{
+  width: 120%;
+  background-color: #182848;
+  height: max-content;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 10;
+  box-shadow: 0px 4px 10px rgba(55, 55, 55, 0.688);
+} 
+.DiscpContainer > p{
+  color: rgb(200, 200, 200);
+  text-align: right;
+  font-size: 1.6rem;
+}
+.LGContainer{
+  width: 100%;
+  height: max-content;
+  padding: 5px 0px;
+  align-items: right;
+  /* background-color: rgb(224, 99, 64); */
+  margin-top: 10px;
+}
+.IconsContainer{
+  width: 100%;
+  /* background-color: yellow; */
+  margin-top: 10px;
+  padding: 5px 0px;
+  display: flex;
+  justify-content: flex-end;
+}
+.techName{
+  word-wrap: break-word;
+  margin: 0px 5px;
+  font-size: 1.4rem;
+  color: rgba(131, 131, 131, 0.803);
+}
+.IconsContainer > a{
+  width: auto;
+  height: auto;
+}
+.Picons{
+  cursor: pointer;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 0px 7px;
+}
+.ProductCrad2{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height:max-content;
+  margin-bottom: 10px;
+}
+.productImage{
+  width: 100%;
+}
+.productDetails{
+  display: none;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.P2dtailCntiner{
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(2px);
+  background-color: #0a192bcd;
+  padding: 20px;
+  border-radius: 10px;
+}
+.P2dtailCntiner > span{
+    font-weight: 550;
+     font-size: 14px;
+     color: #89BBFE;  
+     height: max-content;
+}
+.P2dtailCntiner > h4{
+  color: #FFEEDD;
+  font-size: 2.4rem;
+  height: 40px;
+  letter-spacing: 1px;
+  font-weight: 550;
+  padding: 5px 0px;
+}
+.PImageContainer > h4:hover{
+  color: #00bbff;
+}
+.ProductDiscpContainer > p{
+  color: rgb(200, 200, 200);
+  text-align: left;
+  font-size: 1.8rem;
+  padding: 15px 0px;
+}
+
+@media screen and (max-width : 600px) {
+  .DispalyProjects{
+    display: none;
+  }
+  .productDetails{
+    display: block;
+  }
+  .LGContainer{
+    height: max-content;
+  }
+  .techName{
+    width: 100%;
+    color: rgba(200, 200, 200, 0.702);
+    margin: 0;
+    font-size: 16px;
+    margin-right: 7px;
+  }
+  .Picons{
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
+@media screen and (max-width : 900px) {
+  html{
+    font-size: 55%;
+  }
+  .DispalyProjects{
+    margin-bottom: 0;
+  }
+  .PImageContainer{
+    width: 55%;
+    height: 100%;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+  .PImageContainer > Img{
+    width: 100%;
+    object-fit: scale-down;
+    height: max-content;
+    mix-blend-mode: soft-light;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  .projectdetails{
+    width: 50%;
+  }
+}
+@media screen and (max-width : 380px) {
+  .P2dtailCntiner{
+    width: 100%;
+    padding: 15px 10px;
+  }
+  .techName{
+    font-size: 1.2rem;
+  }
+  .LGContainer{
+    margin: 0;
+  }
+  .IconsContainer{
+    margin: 0;
+  }
+}

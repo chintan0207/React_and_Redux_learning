@@ -1,0 +1,102 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
+
+.dflex{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+}
+
+/* ................navbar............ */
+nav{
+   padding: 15px;
+   justify-content: space-between;
+   background-color: white;
+   color: black;
+   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+   position: sticky;
+   top: 0;
+   opacity: 1;
+   z-index: 1000;
+}
+
+.list{
+  margin: 0;
+  gap: 20px;
+  list-style: none;
+}
+
+.listlink a{
+  text-decoration: none;
+  color:black;
+}
+
+ li h6 a{
+  text-decoration: none;
+  color: white;
+}
+
+/* ...............for homepage.................. */
+
+.home{
+  /* height: 100vh; */
+}
+
+/* ...............for servicepage.................. */
+
+.service{
+  /* height: 100vh; */
+}
+
+/* ............for dark mode........................ */
+
+.darkmodel{
+  background-color: #878b964a;
+  color: white;
+}
+
+.darkmode{
+  background-color: #0c0e13;
+  color: white;
+  border-bottom: 0.1px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ........................................... */
+
+/* .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

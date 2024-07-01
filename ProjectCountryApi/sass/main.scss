@@ -1,0 +1,228 @@
+@import "mixin";
+@import "var";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Nunito, sans-serif;
+   
+}
+
+
+a {
+    text-decoration-line: none;
+    color: inherit;
+}
+
+// .........................navbar.......................
+.navbar {
+    @include flexProperty(row);
+    justify-content: space-between;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    background-color: white;
+
+    div {
+        @include flexProperty(row);
+        gap: 10px;
+  
+    }
+}
+
+.navbar-dark{
+    background-color: #071334;
+    color: white;
+    box-shadow: 0 2px 4px 0px #f0ecea21;
+
+}
+
+.dark{
+    background-color: #071334;
+    color: white;
+
+}
+.carddark{
+    background-color: #1a4a62;
+    color: white;
+}
+
+//..................................main........................
+
+main {
+
+    padding: 50px;
+
+    .search-content {
+
+        @include flexProperty(row);
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 20px 0px;
+
+        .search-container {
+            box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.15);
+            max-width: 350px;
+            width: 100%;
+            border-radius: 4px;
+            padding-left: 24px;
+            color: #999;
+            overflow: hidden;
+            background-color: white;
+
+            input {
+                border: none;
+                outline: none;
+                padding: 16px;
+                width: 90%;
+            }
+        }
+
+
+        .filter-by-region {
+            border: none;
+            outline: none;
+            overflow: hidden;
+            width: 250px;
+            padding: 16px;
+            color: #999;
+            border-radius: 4px;
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    .countries-container{
+        @include flexProperty(row);
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 35px;
+        padding: 35px 0px;
+        // max-width: 1200px;
+
+    }
+
+
+    .country-card {
+        width: 250px;
+        min-height:375px;
+        max-height: 375px;
+        border-radius: 7px;
+        overflow: hidden;
+        padding-bottom: 25px;
+        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+        transition: all 0.2s ease-in-out;
+        background-color: white;
+        color:black;
+        
+    
+        img {
+            width: 100%;
+        }
+
+        .card-text {
+            @include flexProperty(column);
+            align-items: start;
+            padding-inline: 16px;
+            a{
+                text-decoration: none;
+            }
+
+            h3 {
+                font-size: 24px;
+                margin-block: 16px;
+            }
+
+            p {
+                margin-block: 8px;
+            }
+        }
+    }
+
+    .country-card:hover {
+        transform: scale(1.03);
+        box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+}
+
+.shimmer-card{
+    background-color: #9999991c;
+}
+
+//..............................country details..............
+
+.country-details-container {
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 32px;
+}
+
+.back-button {
+    padding: 6px 24px;
+    box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.country-details {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    margin-top: 64px;
+}
+
+.country-details img {
+    width: 40%;
+    border: 1px solid #ddd;
+}
+
+.details-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    column-gap: 64px;
+    max-height: 180px;
+    flex-wrap: wrap;
+}
+
+.details-text p {
+    margin: 0;
+}
+
+.border-countries {
+    margin-top: 48px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.border-countries a {
+    padding: 4px 16px;
+    box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+@media(max-width: 940px) {
+    .country-details {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 32px;
+        gap: 16px;
+    }
+
+    .details-text {
+        max-height: unset;
+    }
+
+    .country-details img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+}

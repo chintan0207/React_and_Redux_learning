@@ -1,0 +1,16 @@
+@mixin flexProperty($fdirection){
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: $fdirection;
+}
+
+@mixin darkmode(){
+    color: white;
+    background-color: black;
+}
+
+@mixin lightmode(){
+    color:black;
+    background-color: white;
+}

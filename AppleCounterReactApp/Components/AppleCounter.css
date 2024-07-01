@@ -1,0 +1,16 @@
+section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+button{
+    height: 50px;
+    width: 70px;
+}
+
+button i{
+    font-size: 20px;
+}

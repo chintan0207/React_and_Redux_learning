@@ -1,0 +1,97 @@
+Open command promt and  type cd\   and enter
+
+1 ) install vs code
+	https://code.visualstudio.com/download
+
+2) go to 
+	https://nodejs.org/en/download
+
+	Download (LTS version only) --> 
+	Windows Installer (.msi) 64 bit
+
+ install --> Windows Installer (.msi) 64 bit
+
+go to
+	https://nodejs.org/en
+	download 18.17.1 LTS
+	install it
+
+3) open command promt
+	npm install -g @angular/cli
+
+4) Fire this commands in command promt
+
+ 	node --version
+	npm --version
+	npm -version
+	ng version
+
+----------------------------------------------------------------------------------------------
+
+5) ng new AppName
+	ng new AngularClient
+	ng new angularclient
+	ng new appname --no-standalone
+
+6) install botstrap
+npm install @ng-bootstrap/ng-bootstrap
+
+7) ng generate directive apply-class
+
+8) 
+ng g c <component name>
+ng g service <service name>
+
+--------------------------------------------------------------------
+9) to run application
+	ng serve --open
+
+--------------------------------------------------------------------
+10) to add bootstrap into project
+
+		npm install @ngbootstrap/ng-bootstrap
+		npm install ngx-bootstrap
+
+
+Add Bootstrap to Angular using Schematics
+		ng add @ng-bootstrap/schematics
+
+------------------------------------------------------------------------------
+
+
+Disabled script issue
+
+ng : File C:\Users\USER\AppData\Roaming\npm\ng.ps1 cannot be loaded because running scripts is disabled on this system.
+ solution -->>
+
+set-ExecutionPolicy RemoteSigned -Scope CurrentUser 
+
+Get-ExecutionPolicy
+
+Get-ExecutionPolicy -list 
+
+ng --version
+
+ng version
+--------------------------------------------------------------------------
+npm cache clear --force 
+
+
+Created one folder <growth>To create an angular workspace using the following command
+Ng new <my-workspace> --create-application=false
+ 
+Create a project
+We will go to the workspaceNg generate application <shopping>Ng generate application<YogeshApp>
+ If you have multiple in your workspace then you can write bellow to run that particular project
+ Ng serve project=shopping
+---------------------------------------------------------------------------
+npm ERR! ERESOLVE unable to resolve dependency tree
+npm ERR! 
+npm ERR! While resolving: my-app@0.0.0
+npm ERR! Found: @angular/compiler@undefined
+
+Solution:
+
+sudo chown -R 501:20 "/Users/nelaarasanmadhesh/.npm"
+
+
