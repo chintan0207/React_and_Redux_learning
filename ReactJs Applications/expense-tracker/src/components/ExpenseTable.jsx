@@ -5,19 +5,22 @@ import { useState } from "react";
 import useFilter from "../hooks/useFilter";
 import ContextMenu from "./ContextMenu";
 
-export default function ExpenseTable({ expenses, setExpenses, setExpense, setEditingRowId }) {
-
-  const [filteredData, setQuery] = useFilter(expenses, (data) => data.category)
+export default function ExpenseTable({
+  expenses,
+  setExpenses,
+  setExpense,
+  setEditingRowId,
+}) {
+  const [filteredData, setQuery] = useFilter(expenses, (data) => data.category);
 
   const [menuPosition, setMenuPosition] = useState({});
-  const [rowId, setRowId] = useState('');
-
-  const [sortCallback, setSortCallback] = useState(() => () => { })
+  const [rowId, setRowId] = useState("");
+  const [sortCallback, setSortCallback] = useState(() => () => {});
 
   const total = filteredData.reduce(
     (accumulator, current) => accumulator + parseFloat(current.amount),
     0
-  )
+  );
 
   return (
     <>
@@ -30,7 +33,12 @@ export default function ExpenseTable({ expenses, setExpenses, setExpense, setEdi
         setExpense={setExpense}
         setEditingRowId={setEditingRowId}
       />
-      <table className='expense-table' onClick={() => { setMenuPosition({}) }}>
+      <table
+        className="expense-table"
+        onClick={() => {
+          setMenuPosition({});
+        }}
+      >
         <thead>
           <tr>
             <th className="amount-column">
@@ -44,7 +52,7 @@ export default function ExpenseTable({ expenses, setExpenses, setExpense, setEdi
                   onClick={() => {
                     setSortCallback(
                       () => (a, b) => a.title.localeCompare(b.title)
-                    )
+                    );
                   }}
                 >
                   <title>Ascending</title>
@@ -58,7 +66,7 @@ export default function ExpenseTable({ expenses, setExpenses, setExpense, setEdi
                   onClick={() => {
                     setSortCallback(
                       () => (a, b) => b.title.localeCompare(a.title)
-                    )
+                    );
                   }}
                 >
                   <title>Descending</title>
@@ -85,13 +93,11 @@ export default function ExpenseTable({ expenses, setExpenses, setExpense, setEdi
                   viewBox="0 0 384 512"
                   className="arrow up-arrow"
                   onClick={() => {
-                    setSortCallback(() => (a, b) => a.amount - b.amount)
+                    setSortCallback(() => (a, b) => a.amount - b.amount);
                   }}
                 >
                   <title>Ascending</title>
-                  <path
-                    d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-                  />
+                  <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
                 </svg>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -99,28 +105,28 @@ export default function ExpenseTable({ expenses, setExpenses, setExpense, setEdi
                   viewBox="0 0 384 512"
                   className="arrow down-arrow"
                   onClick={() => {
-                    setSortCallback(() => (a, b) => b.amount - a.amount)
+                    setSortCallback(() => (a, b) => b.amount - a.amount);
                   }}
                 >
                   <title>Descending</title>
-                  <path
-                    d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
-                  />
+                  <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
                 </svg>
               </div>
             </th>
           </tr>
         </thead>
         <tbody>
-
           {filteredData
             .sort(sortCallback)
             .map(({ id, title, category, amount }) => (
-              <tr key={id} onContextMenu={(e) => {
-                e.preventDefault()
-                setMenuPosition({ left: e.clientX + 4, top: e.clientY + 4 })
-                setRowId(id)
-              }}>
+              <tr
+                key={id}
+                onContextMenu={(e) => {
+                  e.preventDefault();
+                  setMenuPosition({ left: e.clientX + 4, top: e.clientY + 4 });
+                  setRowId(id);
+                }}
+              >
                 <td>{title}</td>
                 <td>{category}</td>
                 <td>₹{amount}</td>
@@ -131,7 +137,7 @@ export default function ExpenseTable({ expenses, setExpenses, setExpense, setEdi
             <th
               className="clear-sort"
               onClick={() => {
-                setSortCallback(() => () => { })
+                setSortCallback(() => () => {});
               }}
             >
               Clear Sort
@@ -141,8 +147,10 @@ export default function ExpenseTable({ expenses, setExpenses, setExpense, setEdi
           </tr>
         </tbody>
       </table>
-      <p>Note: Right-click or hold on the table-row to Delete or Edit the expense.</p>
-
+      <p>
+        Note: Right-click or hold on the table-row to Delete or Edit the
+        expense.
+      </p>
     </>
-  )
+  );
 }

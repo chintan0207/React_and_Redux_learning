@@ -1,16 +1,17 @@
 /* eslint-disable no-unused-vars */
 import { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
+import FilterData from "../components/FilterData";
 
 export default function About() {
   const context = useContext(ThemeContext);
   const { theme } = context;
   return (
-    <>
+    <div className="px-3 py-3 ">
       <div
         className={`${
           theme === "light" ? "" : "bg-black text-white"
-        } px-5 py-4 h-screen`}
+        } my-4 border rounded-md p-2 `}
       >
         <h2>About</h2>
         <p>
@@ -24,6 +25,7 @@ export default function About() {
           className which return object of isActive:true
         </p>
       </div>
-    </>
+      <FilterData />
+    </div>
   );
 }
