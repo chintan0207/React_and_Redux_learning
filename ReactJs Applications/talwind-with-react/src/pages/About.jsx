@@ -2,6 +2,7 @@
 import { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
 import FilterData from "../components/FilterData";
+import User from "../components/User";
 
 export default function About() {
   const context = useContext(ThemeContext);
@@ -9,9 +10,8 @@ export default function About() {
   return (
     <div className="px-3 py-3 ">
       <div
-        className={`${
-          theme === "light" ? "" : "bg-black text-white"
-        } my-4 border rounded-md p-2 `}
+        className={`${theme === "light" ? "" : "bg-black text-white"
+          } my-4 border rounded-md p-2 `}
       >
         <h2>About</h2>
         <p>
@@ -25,6 +25,7 @@ export default function About() {
           className which return object of isActive:true
         </p>
       </div>
+      <User />
       <FilterData />
     </div>
   );
