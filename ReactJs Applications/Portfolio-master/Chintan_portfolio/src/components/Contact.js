@@ -10,7 +10,7 @@ import twitter from "../Images/twitter.png";
 function Contact() {
   useEffect(() => {
     anim();
-  }, [anim]);
+  }, []);
   return (
     <div
       className="maincontainer"
@@ -23,7 +23,7 @@ function Contact() {
             <span className='tabNames'><span>05.</span>Contact Me</span>
             <div className='titleHrLine'></div>
           </div>
-          
+
           <span className="GIT hidden"> Get In Touch </span>
           <p className="pggg hidden">
             {" "}

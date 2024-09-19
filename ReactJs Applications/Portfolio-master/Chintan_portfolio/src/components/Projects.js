@@ -11,7 +11,7 @@ import Card from "./Card";
 function Projects() {
   useEffect(() => {
     anim();
-  }, [anim]);
+  }, []);
   return (
     <div className="productContainer" id="ProjectSection">
       <div className="titleContainer">
@@ -25,89 +25,102 @@ function Projects() {
         Projectname="iNotebook"
         ProjectDisp="iNotebook is a React Application for managing personal notes.This application allows users to register, store, and manage
         private notes on the cloud."
-        tech={['ReactJS','NodeJS','MongoDb','MERN stack']}
-        github= "https://github.com/chintan0207/inotebook"
+        tech={['ReactJS', 'NodeJS', 'MongoDb', 'MERN stack']}
+        github="https://github.com/chintan0207/inotebook"
         Projectlink="https://inotebook-chintan.netlify.app/"
-        poster= {inotebook}
+        poster={inotebook}
       />
-      <ProjectDisp 
-      Imagealine="right"
-      Projectname="Smart Cab Point"
-      ProjectDisp="Smart Cab Point application for taxi-booking.Users can fill out the booking form, book a cab, and add the
+      <ProjectDisp
+        Imagealine="right"
+        Projectname="Smart Cab Point"
+        ProjectDisp="Smart Cab Point application for taxi-booking.Users can fill out the booking form, book a cab, and add the
       trip to their cart on this online platform for booking taxis."
-      tech={['ReactJS','NodeJS','MongoDb','MERN stack']}
-      github= "https://github.com/chintan0207/smart_cab_reactapp"
-      Projectlink="https://smart-cab-point-reactjs-chintan.netlify.app/" 
-      poster={cabposter}
+        tech={['ReactJS', 'NodeJS', 'MongoDb', 'MERN stack']}
+        github="https://github.com/chintan0207/smart_cab_reactapp"
+        Projectlink="https://smart-cab-point-reactjs-chintan.netlify.app/"
+        poster={cabposter}
       />
-       <ProjectDisp
+      <ProjectDisp
         Imagealine="right"
         Projectname="Online book store"
         ProjectDisp="An online bookstore is an application where users may
         purchase books and the administrator can add, remove,
         update, and view the books."
         tech={["Java", "spring-boot", "Angular", "MySQL"]}
-        github= "https://github.com/chintan0207/Online_BookStore_System"
+        github="https://github.com/chintan0207/Online_BookStore_System"
         poster={bookstore}
       />
 
 
       <div className="OtherprojectContainer">
-      <h1>Other Noteworthy Projects</h1>
+        <h1>Other Noteworthy Projects</h1>
 
 
-      <div className="cardContainer">
-        <Card
-          name="ForText"
-          disp="Fortext is a utility which can be used to manipulate your text in the way you want."
-          tech={['ReactJs','Javascript']}
-          github="https://github.com/chintan0207/ForText"
-          Plink="https://fortext-chp.netlify.app/"
-        />
+        <div className="cardContainer">
 
-        <Card
-        name="Expense-Tracker"
-        disp="An expense tracker facilitates the calculation of expenses for users and allows them to examine them by category by sorting"
-        tech={["ReactJs", "JSX", "CSS"]}
-        github="https://github.com/chintan0207/Expense-tracker"
-        Plink = "https://expense-trackerchp.netlify.app/"
-      />
+          <Card
+            name="Expense-Tracker"
+            disp="An expense tracker facilitates the calculation of expenses for users and allows them to examine them by category by sorting"
+            tech={["ReactJs", "JSX", "CSS"]}
+            github="https://github.com/chintan0207/Expense-tracker"
+            Plink="https://expense-trackerchp.netlify.app/"
+          />
 
-      
-      <Card
-      name="Amazon UI"
-      disp="Similar to amazon India's user interface and user experience design. It was created with HTML, CSS and Javascript login and signUp form Validation."
-      tech={["HTML", "JavaScript", "CSS"]}
-      github=""
-      Plink = "https://amazon-subnavfeatures.netlify.app/"
-    />
+          <Card
+            name="ForText"
+            disp="Fortext is a utility which can be used to manipulate your text in the way you want."
+            tech={['ReactJs', 'Javascript']}
+            github="https://github.com/chintan0207/ForText"
+            Plink="https://fortext-chp.netlify.app/"
+          />
+
+          <Card
+            name="Gmail-Clone"
+            disp="Gmail-clone is a web app that replicates the appearance of Gmail and implements certain of its features."
+            tech={["ReactJs", "tailwind", "firebase"]}
+            github="https://github.com/chintan0207/Gmail-clone"
+            Plink="https://clone-5f65a.web.app/"
+          />
 
 
-    <Card
-    name="Artful-Corner"
-    disp="Artful-Corner is responsive static website for Interier Design company using ReactJs"
-    tech={["ReactJs", "JSX", "CSS"]}
-    github="https://github.com/chintan0207/artful-corner"
-    Plink = "https://artful-corner-interiar-design-studio.netlify.app/"
-  />
 
-       <Card
-          name="Todo list"
-          disp="ToDo list Website Using React JS and Local Storage For Storage And CRUD operations"
-          tech={["ReactJS","JavaScript", "Bootstrap"]}
-          github="https://github.com/chintan0207/To-Do"
-          Plink="https://chp-todolist.netlify.app/"
-        />
 
-         <Card
-          name="Calculator"
-          disp="Calculator is web application Which can do simple calculation addition, subtraction, muiltiplication and division."
-          tech={["HTML", "JavaScript", "CSS"]}
-          github="https://github.com/chintan0207/OIDSIP-Level/tree/main/calculator"
-          Plink="https://calchintan.netlify.app/"
-        />
 
-      </div>
+
+          <Card
+            name="Artful-Corner"
+            disp="Artful-Corner is responsive static website for Interier Design company using ReactJs"
+            tech={["ReactJs", "JSX", "CSS"]}
+            github="https://github.com/chintan0207/artful-corner"
+            Plink="https://artful-corner-interiar-design-studio.netlify.app/"
+          />
+
+          <Card
+            name="Todo list"
+            disp="ToDo list Website Using React JS and Local Storage For Storage And CRUD operations"
+            tech={["ReactJS", "JavaScript", "Bootstrap"]}
+            github="https://github.com/chintan0207/To-Do"
+            Plink="https://chp-todolist.netlify.app/"
+          />
+          <Card
+            name="Amazon UI"
+            disp="Similar to amazon India's user interface and user experience design. It was created with HTML, CSS and Javascript login and signUp form Validation."
+            tech={["HTML", "JavaScript", "CSS"]}
+            github=""
+            Plink="https://amazon-subnavfeatures.netlify.app/"
+          />
+
+
+          <Card
+            name="Calculator"
+            disp="Calculator is web application Which can do simple calculation addition, subtraction, muiltiplication and division."
+            tech={["HTML", "JavaScript", "CSS"]}
+            github="https://github.com/chintan0207/OIDSIP-Level/tree/main/calculator"
+            Plink="https://calchintan.netlify.app/"
+          />
+
+
+        </div>
       </div>
     </div>
   );

@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import anim from "../Animations/Touch";
-import dev2 from "../Images/dev.gif";
 import Ecard from "../Widgets/Ecard";
 
 function Education() {
   useEffect(() => {
     anim();
-  }, [anim]);
+  }, []);
   return (
     <div
       className="maincontainer"
@@ -75,24 +74,24 @@ function Education() {
             degree="Bachlore of Engineering"
             clg="Dr. Jivraj Mehta Institute of Technology,Anand"
             university="Gujarat Technical University"
-            course= "Information Technology"
-            percentage= "8.77"
+            course="Information Technology"
+            percentage="8.77"
           />
           <Ecard
             year="2018 - 2019"
             degree="Higher Secondary"
             clg="NS vidhyalaya,Chikhli"
             university="Gujarat Secondry & Higher Secondry Education Board"
-            course= "Science"
-            percentage= "78%"
+            course="Science"
+            percentage="78%"
           />
           <Ecard
             year="2016 - 2017"
             degree="Secondary"
             clg="The D.E. Italia Highschool,Chikhli"
             university="Gujarat Secondry & Higher Secondry Education Board"
-            course= "SSC"
-            percentage= "84%"
+            course="SSC"
+            percentage="84%"
           />
         </div>
       </div>
