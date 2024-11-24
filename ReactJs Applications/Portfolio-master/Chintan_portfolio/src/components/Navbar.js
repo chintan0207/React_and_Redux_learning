@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/jsx-no-target-blank */
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import menu from "../Images/menu.png";
 import close from "../Images/close.png";
 
@@ -10,7 +10,9 @@ export default function Navbar() {
   return (
     <>
       <div className="navbar animate__animated animate__fadeIn">
-        <a href="#Home" className="logo animate__animated animate__backInDown">Chp</a>
+        <a href="#Home" className="logo animate__animated animate__backInDown">
+          Chp
+        </a>
         <div className="right_nav">
           <a
             href="#AboutMeSection"
@@ -48,7 +50,7 @@ export default function Navbar() {
             <span className="nums">05.</span>Contact
           </a>
           <a
-            href="https://drive.google.com/file/d/16xdij_WLg-sOqIbE9BUGh68MayceSG8x/view?usp=sharing"
+            href="https://drive.google.com/file/d/1gMARoEUlXErDc9u1PVYSDSchVlwFxwvj/view?usp=sharing"
             className="resumeBtn animate__animated animate__backInDown"
             target="_blank"
             style={{ animationDelay: "300ms" }}
@@ -122,7 +124,7 @@ export default function Navbar() {
             Contact
           </a>
           <a
-            href="https://drive.google.com/file/d/1i1dV2Oz3BA_HUtMT79jlBVRbhvZNQSIu/view?usp=drivesdk"
+            href="https://drive.google.com/file/d/1gMARoEUlXErDc9u1PVYSDSchVlwFxwvj/view?usp=sharing"
             className="resumeBtn2  animate__animated animate__slideInUp"
             style={{ animationDelay: "250ms" }}
             target="_blank"
@@ -133,5 +135,5 @@ export default function Navbar() {
         </div>
       </div>
     </>
-  )
+  );
 }
