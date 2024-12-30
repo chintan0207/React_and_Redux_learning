@@ -1,26 +1,27 @@
 import React from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import "./Navbar.scss";
 
 const Navbar2 = () => {
   return (
     <div className="flex justify-between items-center h-[55px] w-full shadow-sm p-4">
       <ul className="flex items-center gap-5">
-        <li className="relative flex items-center gap-1 group">
+        <li className="relative group flex items-center gap-1 cursor-pointer">
           <span>Accounting</span>
           <div>
             <MdKeyboardArrowDown className="text-2xl" />
           </div>
           <div className="box hidden absolute top-[25px] h-fit w-[230px] bg-white shadow group-hover:flex">
             <ul className="flex flex-col gap-4 p-5 pr-2">
-              <li className="relative flex items-start justify-between gap-1 group1:">
-                <span>Registration Service</span>
-                <div>
-                  <MdKeyboardArrowDown className="text-2xl" />
-                </div>
-                <div>
-                  <span>Business Registration</span>
-                  <span>Trademark Filing</span>
-                  <span>Compliance Assistance</span>
+              <li className="relative flex items-start justify-between gap-1">
+                <div className="group">
+                  <span className="">Registration Service</span>
+                  <div>
+                    <MdKeyboardArrowDown className="text-2xl" />
+                  </div>
+                  <div className="hidden group-hover:block absolute top-[5px] left-[210px] h-[200px] w-[230px] bg-red-500 shadow">
+                    subdropdown
+                  </div>
                 </div>
               </li>
               <li className="relative flex items-start justify-between gap-1">
